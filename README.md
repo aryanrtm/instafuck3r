@@ -1,11 +1,10 @@
 # Insta Fucker
 Multiple Instagram Dictionary Attack
 ### Features
-
-### Usage
 - Multi-Thread
 - Anonymous attack (TOR)
 - Install all dependencies
+### Usage
 ```
 $ git clone https://github.com/aryanrtm/instafuck3r
 $ cd instafuck3r
