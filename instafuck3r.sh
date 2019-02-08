@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Insta Fuck3r
+# Release on 08/02/2019
+# Github: github.com/aryanrtm/instafuck3r
+# © Copyright ~ 4WSec
 
 # Color
 PP='\033[95m' # purple
