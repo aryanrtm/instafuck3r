@@ -29,7 +29,8 @@ threads=5
 xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=$(curl -s -L -i "https://www.instagram.com/accounts/login/ajax/" | grep "csrftoken" | cut -d "=" -f2 | cut -d ";" -f1)
 
 
-function banner(){
+function banner()
+{
 	printf "${YW}
       ____
  /  /'    '\  \ 
